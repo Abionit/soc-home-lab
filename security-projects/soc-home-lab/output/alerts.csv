@@ -1,0 +1,6 @@
+rule_id,severity,user,source_ip,first_seen,last_seen,details
+R001,high,alice,77.91.72.10,2026-04-14T16:21:39.037912+00:00,2026-04-14T17:48:59.037912+00:00,8 failed logins in <= 10 minutes
+R002,critical,alice,77.91.72.10,2026-04-14T14:13:39.037912+00:00,2026-04-14T14:13:39.037912+00:00,Privilege change detected from external geography
+R002,critical,bob,77.91.72.10,2026-04-14T15:51:39.037912+00:00,2026-04-14T15:51:39.037912+00:00,Privilege change detected from external geography
+R002,critical,eve,77.91.72.10,2026-04-14T16:30:39.037912+00:00,2026-04-14T16:30:39.037912+00:00,Privilege change detected from external geography
+R002,critical,bob,77.91.72.10,2026-04-14T17:49:39.037912+00:00,2026-04-14T17:49:39.037912+00:00,Privilege change detected from external geography
