@@ -8,9 +8,10 @@ from pathlib import Path
 
 import pandas as pd
 
-RAW_EVENTS_PATH = Path("data/raw_events.jsonl")
-ALERTS_CSV_PATH = Path("output/alerts.csv")
-ALERTS_MD_PATH = Path("output/alerts_report.md")
+ROOT = Path(__file__).resolve().parent.parent
+RAW_EVENTS_PATH = ROOT / "data" / "raw_events.jsonl"
+ALERTS_CSV_PATH = ROOT / "output" / "alerts.csv"
+ALERTS_MD_PATH = ROOT / "output" / "alerts_report.md"
 
 
 @dataclass
@@ -49,21 +50,27 @@ def detect_failed_login_burst(events: list[dict], window_minutes: int = 10, thre
         timestamps = sorted(timestamps)
         left = 0
         max_count = 0
+        best_window: tuple[datetime, datetime] | None = None
 
         for right in range(len(timestamps)):
             while timestamps[right] - timestamps[left] > timedelta(minutes=window_minutes):
                 left += 1
-            max_count = max(max_count, right - left + 1)
 
-        if max_count >= threshold:
+            window_count = right - left + 1
+            if window_count > max_count:
+                max_count = window_count
+                best_window = (timestamps[left], timestamps[right])
+
+        if max_count >= threshold and best_window is not None:
+            first_seen, last_seen = best_window
             alerts.append(
                 Alert(
                     rule_id="R001",
                     severity="high",
                     user=user,
                     source_ip=source_ip,
-                    first_seen=timestamps[0].isoformat(),
-                    last_seen=timestamps[-1].isoformat(),
+                    first_seen=first_seen.isoformat(),
+                    last_seen=last_seen.isoformat(),
                     details=f"{max_count} failed logins in <= {window_minutes} minutes",
                 )
             )

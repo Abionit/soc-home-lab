@@ -6,13 +6,12 @@ import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW_EVENTS_PATH = ROOT / "data" / "raw_events.jsonl"
 ALERTS_PATH = ROOT / "output" / "alerts.csv"
 REPORT_PATH = ROOT / "output" / "alerts_report.md"
 
 st.set_page_config(page_title="SOC Home Lab Dashboard", page_icon="🚨", layout="wide")
 st.title("SOC Home Lab Dashboard")
-st.caption("Visual evidence for portfolio: alerts, severities, users, and source IPs")
+st.caption("Visual evidence for a blue-team portfolio: alerts, severities, users, and source IPs")
 
 if not ALERTS_PATH.exists():
     st.warning("No alerts file found. Run: python src/run_pipeline.py")
@@ -56,7 +55,10 @@ if REPORT_PATH.exists():
     st.markdown(REPORT_PATH.read_text(encoding="utf-8"))
 
 st.divider()
-st.markdown("### Screenshot checklist")
-st.markdown("1. Metrics cards (total alerts, users, source IPs)")
-st.markdown("2. Severity distribution chart")
-st.markdown("3. Alerts table with at least one critical alert")
+st.markdown("### Evidence checklist")
+st.markdown("1. Pipeline success terminal")
+st.markdown("2. Metrics cards")
+st.markdown("3. Severity distribution chart")
+st.markdown("4. Rule distribution chart")
+st.markdown("5. Alerts table with at least one critical alert")
+st.markdown("6. Report preview")

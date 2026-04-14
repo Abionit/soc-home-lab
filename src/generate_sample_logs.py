@@ -5,6 +5,8 @@ import random
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+
 EVENT_TYPES = [
     "login_success",
     "login_failed",
@@ -98,7 +100,7 @@ def generate_events(total: int = 250) -> list[dict]:
 
 
 def main() -> None:
-    output_path = Path("data/raw_events.jsonl")
+    output_path = ROOT / "data" / "raw_events.jsonl"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     events = generate_events()
