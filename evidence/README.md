@@ -1,11 +1,11 @@
-# Evidence Pack
+# Evidence
 
-This folder should contain real screenshots, not placeholder images or broken PNG files.
+I do not want fake or broken screenshots in this folder. Until I capture real images, this directory only keeps this note.
 
-Before publishing this project in a portfolio, capture and save these files:
+When I refresh the portfolio version of this project, these are the screenshots I want to save here:
 
 1. `01_pipeline_success.png`
-   Terminal showing `python src/run_pipeline.py` finishing successfully.
+   Terminal after a successful `python src/run_pipeline.py` run.
 2. `02_dashboard_metrics.png`
    Top metrics cards with total alerts, unique users, and unique source IPs.
 3. `03_dashboard_severity.png`
@@ -24,8 +24,4 @@ Optional extras:
 - `09_alerts_csv_preview.png`
 - `10_alerts_report_md.png`
 
-Notes:
-
-- Keep this folder with only `README.md` until you have real screenshots.
-- Capture evidence from the current sample dataset after running the pipeline.
-- Prefer readable browser zoom and a terminal theme with good contrast.
+If the folder contains screenshots in the future, they should be real captures from the current project state.

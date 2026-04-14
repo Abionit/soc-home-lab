@@ -2,33 +2,30 @@
 
 [Read in English](README.md)
 
-SOC Home Lab es un proyecto de portafolio blue-team que simula un flujo SOC junior desde eventos crudos hasta evidencia lista para triage. El repositorio genera telemetria de seguridad de ejemplo, aplica reglas de deteccion, produce salidas faciles de revisar y muestra los resultados en un dashboard ligero con Streamlit.
+Este repositorio hace parte de mi portafolio publico. Lo construyi para practicar un flujo SOC pequeno de punta a punta: generar eventos, detectar comportamiento sospechoso y convertirlo en salidas que se puedan revisar con rapidez durante el triage.
 
-## Lo que demuestra este proyecto
+Lo mantuve compacto a proposito. Queria un proyecto que alguien pudiera entender en pocos minutos y que al mismo tiempo sirviera para conversar sobre mi forma de trabajar en una entrevista.
 
-- Generacion de eventos de seguridad con actividad de inicio de sesion, cambios de privilegio, reseteos de contrasena y acceso a archivos
-- Reglas de deteccion para rafagas de autenticacion fallida y cambios de privilegio riesgosos
-- Artefactos de triage en formato CSV y Markdown
-- Un dashboard sencillo para convertir alertas en evidencia de portafolio y material de entrevista
-- Una estructura clara para que reclutadores, mentores y colaboradores entiendan rapido el proyecto
+## Que hace este proyecto
 
-## Casos de uso de deteccion
+1. Genera eventos de seguridad de ejemplo
+2. Aplica dos reglas de deteccion
+3. Escribe alertas en CSV y Markdown
+4. Muestra los resultados en un dashboard sencillo con Streamlit
 
-- `R001` `high`: rafaga de logins fallidos del mismo usuario y la misma IP en una ventana de 10 minutos
+## Archivos que vale la pena abrir primero
+
+- `src/detect_alerts.py` para ver la logica de deteccion
+- `output/alerts_report.md` para ver el reporte generado con la muestra actual
+- `src/dashboard.py` para la capa visual de revision
+- `data/raw_events.jsonl` para ver la telemetria de ejemplo
+
+## Reglas actuales
+
+- `R001` `high`: varios logins fallidos del mismo usuario y la misma IP dentro de una ventana de 10 minutos
 - `R002` `critical`: cambio de privilegios desde una geografia no confiable
 
-## Flujo de trabajo
-
-```mermaid
-flowchart LR
-    A[Generar eventos de ejemplo] --> B[Ejecutar reglas de deteccion]
-    B --> C[alerts.csv]
-    B --> D[alerts_report.md]
-    C --> E[Dashboard de Streamlit]
-    D --> E
-```
-
-## Estructura del repositorio
+## Estructura del repo
 
 ```text
 soc-home-lab/
@@ -49,7 +46,7 @@ soc-home-lab/
 `-- README.es.md
 ```
 
-## Inicio rapido
+## Como ejecutarlo
 
 ### macOS o Linux
 
@@ -65,28 +62,19 @@ streamlit run src/dashboard.py
 
 ```powershell
 python -m venv .venv
-.venv\\Scripts\\Activate.ps1
+.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python src/run_pipeline.py
 streamlit run src/dashboard.py
 ```
 
-## Salidas
+## Por que lo dejo publico
 
-- `output/alerts.csv` contiene las alertas normalizadas para filtrado o exportacion.
-- `output/alerts_report.md` contiene un resumen legible util para notas de caso o capturas de portafolio.
-- `evidence/README.md` lista el paquete de capturas que conviene generar antes de publicar el proyecto.
-
-## Por que este repo funciona bien en portafolio
-
-- Muestra pensamiento de seguridad de punta a punta en lugar de scripts aislados.
-- La logica de deteccion es legible y facil de explicar en entrevista.
-- Combina salida tecnica con evidencia visual lista para presentar.
-- El tamano del codigo permite revisarlo rapido, lo que ayuda a que entiendan tu trabajo sin friccion.
+Este repo me sirve para mostrar como pienso un problema de deteccion y triage en un formato pequeno pero facil de revisar. En lugar de solo listar herramientas, enseña un flujo con generacion de datos, logica de alertas, salidas para analista y una capa visual basica.
 
 ## Siguientes mejoras
 
-- Agregar mapeo MITRE ATT&CK por regla
-- Introducir allowlists y umbrales adaptativos
-- Enriquecer alertas con contexto de IP y ownership
-- Agregar mas detecciones como impossible travel, password spray y acceso sospechoso a archivos
+- agregar mapeo MITRE ATT&CK por regla
+- agregar allowlists y umbrales adaptativos
+- enriquecer alertas con mejor contexto de origen
+- sumar mas detecciones como impossible travel y password spray

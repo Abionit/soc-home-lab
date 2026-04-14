@@ -1,34 +1,31 @@
 # SOC Home Lab
 
-[Version en espanol](README.es.md)
+[Leer en espanol](README.es.md)
 
-SOC Home Lab is a compact blue-team portfolio project that simulates a junior SOC workflow from raw events to triage-ready evidence. The repository generates sample security telemetry, applies rule-based detections, produces analyst-friendly outputs, and exposes the results in a lightweight Streamlit dashboard.
+This repository is part of my public portfolio. I built it to practice a small SOC workflow end to end: generate events, detect suspicious behavior, and turn that into outputs that are easier to review during triage.
 
-## What this project demonstrates
+It is intentionally compact. I wanted a project that someone can understand in a few minutes and still use as a strong interview conversation piece.
 
-- Security event generation with realistic login, privilege change, password reset, and file access activity
-- Rule-based detections for suspicious authentication bursts and risky privilege changes
-- Triage-ready artifacts in both CSV and Markdown formats
-- A simple dashboard that turns alerts into portfolio evidence and interview material
-- Clear project packaging that is easy for recruiters, mentors, and collaborators to review
+## What this project does
 
-## Detection use cases
+1. Generates sample security events
+2. Applies two detection rules
+3. Writes alerts to CSV and Markdown
+4. Shows the results in a simple Streamlit dashboard
 
-- `R001` `high`: burst of failed logins from the same user and source IP within a 10-minute window
-- `R002` `critical`: privilege change from a non-trusted geography
+## Files worth opening first
 
-## Workflow
+- `src/detect_alerts.py` for the detection logic
+- `output/alerts_report.md` for the report generated from the sample run
+- `src/dashboard.py` for the visual review layer
+- `data/raw_events.jsonl` for the sample telemetry used by the pipeline
 
-```mermaid
-flowchart LR
-    A[Generate sample events] --> B[Run detection rules]
-    B --> C[alerts.csv]
-    B --> D[alerts_report.md]
-    C --> E[Streamlit dashboard]
-    D --> E
-```
+## Current detection rules
 
-## Repository structure
+- `R001` `high`: repeated failed logins from the same user and source IP inside a 10 minute window
+- `R002` `critical`: privilege change coming from a non-trusted geography
+
+## Repo layout
 
 ```text
 soc-home-lab/
@@ -49,7 +46,7 @@ soc-home-lab/
 `-- README.es.md
 ```
 
-## Quick start
+## Run it locally
 
 ### macOS or Linux
 
@@ -65,28 +62,19 @@ streamlit run src/dashboard.py
 
 ```powershell
 python -m venv .venv
-.venv\\Scripts\\Activate.ps1
+.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python src/run_pipeline.py
 streamlit run src/dashboard.py
 ```
 
-## Outputs
+## Why I keep this project public
 
-- `output/alerts.csv` contains the normalized alerts that an analyst could filter or export.
-- `output/alerts_report.md` contains a readable summary useful for case-study notes or portfolio screenshots.
-- `evidence/README.md` lists the screenshot pack that should be captured before publishing the project as portfolio evidence.
-
-## Why this repo works as a portfolio piece
-
-- It shows end-to-end security thinking instead of isolated scripts.
-- The detection logic is readable enough to discuss in interviews.
-- The repo gives both technical output and presentation-ready evidence.
-- The codebase is small enough to audit quickly, which helps reviewers understand your work fast.
+This repo shows how I think about detection and triage in a simple but reviewable format. Instead of only listing tools, it shows a small workflow with data generation, alert logic, analyst outputs, and a basic dashboard.
 
 ## Next improvements
 
-- Add MITRE ATT&CK mapping for each rule
-- Introduce allowlists and adaptive thresholds
-- Enrich alerts with source IP context and ownership data
-- Add more detections for impossible travel, password spray, and suspicious file access
+- add MITRE ATT&CK mapping for each rule
+- add allowlists and adaptive thresholds
+- enrich alerts with better source context
+- add more detections such as impossible travel and password spray
