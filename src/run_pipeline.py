@@ -15,14 +15,17 @@ def run_step(script_name: str) -> None:
 
 
 def main() -> None:
-    print("[1/2] Generating sample security events...")
+    print("[1/3] Generating sample security events...")
     run_step("generate_sample_logs.py")
 
-    print("[2/2] Running alert detection rules...")
+    print("[2/3] Running alert detection rules...")
     run_step("detect_alerts.py")
 
+    print("[3/3] Building analytics database and SQL exports...")
+    run_step("build_analytics.py")
+
     print("Pipeline finished successfully.")
-    print("Check output/alerts.csv and output/alerts_report.md")
+    print("Check output/alerts.csv, output/alerts_report.md, and output/alert_kpis.csv")
 
 
 if __name__ == "__main__":
