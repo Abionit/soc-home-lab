@@ -1,0 +1,4 @@
+rule_id,severity,alert_count,sla_breaches,avg_triage_minutes
+R002,critical,2,2,19.0
+R003,high,2,0,27.0
+R001,high,1,1,42.0

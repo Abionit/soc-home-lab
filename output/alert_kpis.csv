@@ -1,0 +1,2 @@
+total_events,total_alerts,critical_alerts,active_alerts,avg_triage_minutes,avg_resolution_minutes,sla_breaches
+332,5,2,1,26.8,206.3,3

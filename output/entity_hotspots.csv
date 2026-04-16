@@ -1,0 +1,5 @@
+hostname,user,alert_count,max_severity
+mail-01,carol,2,high
+jumpbox-01,bob,1,critical
+jumpbox-01,eve,1,critical
+vpn-gateway-01,alice,1,high
