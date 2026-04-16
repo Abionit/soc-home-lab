@@ -15,8 +15,3 @@ Upload the portfolio screenshots for the current version here:
 7. `<img width="1242" height="588" alt="image" src="https://github.com/user-attachments/assets/ca2e990b-509b-4545-acda-12b63d8f52cd" />
 
 
-2. Run `python -m streamlit run src/dashboard.py`
-3. Capture the dashboard sections in the order listed above
-4. Save the files in this folder with the exact names
-
-This keeps the evidence aligned with the `v2` portfolio release and makes review easier for recruiters.
