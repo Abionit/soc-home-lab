@@ -2,16 +2,22 @@
 
 Upload the portfolio screenshots for the current version here:
 
-1. `<img width="1267" height="592" alt="image" src="https://github.com/user-attachments/assets/2ca85ba3-e44b-4e09-8fb0-076b1570817b" />
-2. `<img width="1254" height="588" alt="image" src="https://github.com/user-attachments/assets/9e9e58b3-375c-4b79-9f53-4af1c9c4d704" />
-3. `<img width="1255" height="589" alt="image" src="https://github.com/user-attachments/assets/4c457114-c945-4b85-9859-ef64f7b41afc" />
+1. <img width="917" height="581" alt="image" src="https://github.com/user-attachments/assets/a261cf16-3f1c-459e-9cc2-0c97aba4d8b1" />
 
-4. `<img width="1220" height="517" alt="image" src="https://github.com/user-attachments/assets/1717d0ea-b7b0-4447-89d3-5c08c563eff6" />
+2. <img width="908" height="492" alt="image" src="https://github.com/user-attachments/assets/06b1ebfb-8541-436d-b476-59f66a0a3f45" />
 
-5. `<img width="1230" height="451" alt="image" src="https://github.com/user-attachments/assets/47a7379f-c895-4bda-b2c1-b8bab26d53eb" />
+3. <img width="871" height="572" alt="image" src="https://github.com/user-attachments/assets/65a5b9ef-870d-43dc-8e66-db0fb1af9526" />
 
-6. `<img width="1263" height="586" alt="image" src="https://github.com/user-attachments/assets/7c42687e-495a-4f0b-a83d-092bca2c1fc4" />
+4. <img width="1252" height="536" alt="image" src="https://github.com/user-attachments/assets/2a033794-2963-4ff1-90b3-98e6f2002045" />
 
-7. `<img width="1242" height="588" alt="image" src="https://github.com/user-attachments/assets/ca2e990b-509b-4545-acda-12b63d8f52cd" />
+
+5. <img width="917" height="538" alt="image" src="https://github.com/user-attachments/assets/34ece88e-44d3-47ec-aa50-e41767fd4ca3" />
+
+
+6. <img width="891" height="444" alt="image" src="https://github.com/user-attachments/assets/6a4b03c4-9cfe-49a6-9c4a-4e86af4633d7" />
+
+
+7. <img width="887" height="579" alt="image" src="https://github.com/user-attachments/assets/8d65b64d-47c5-4b19-948f-1d9bb000b7a3" />
+
 
 
