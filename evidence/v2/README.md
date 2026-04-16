@@ -1,6 +1,6 @@
 ## SOC Home Lab v2 - Screenshot Checklist
 
-Upload the portfolio screenshots for the current version here:
+
 
 1. <img width="917" height="581" alt="image" src="https://github.com/user-attachments/assets/a261cf16-3f1c-459e-9cc2-0c97aba4d8b1" />
 
