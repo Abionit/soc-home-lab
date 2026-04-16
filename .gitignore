@@ -1,7 +1,5 @@
 .venv/
 __pycache__/
-*.pyc
 .pytest_cache/
 .streamlit/
-.vscode/
-.idea/
+analytics/soc_home_lab.db
