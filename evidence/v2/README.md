@@ -1,8 +1,9 @@
 ## SOC Home Lab v2 - Screenshot Checklist
 
-Upload the portfolio screenshots for the current version here:
 
-1. `01_pipeline_success.png`
+
+1. <img width="1259" height="585" alt="image" src="https://github.com/user-attachments/assets/bc8bb495-b595-46c2-9115-63b9a0508211" />
+
 2. `02_dashboard_metrics.png`
 3. `03_dashboard_trend_severity.png`
 4. `04_dashboard_status_rules.png`
