@@ -1,4 +1,4 @@
-# SOC Home Lab - Detection, Analytics, and Triage Pipeline
+# SOC Home Lab v2 - Detection, Analytics, and Triage Pipeline
 
 Portfolio project that demonstrates practical SOC analyst skills with a reproducible detection pipeline, SQL reporting, and a lightweight operational dashboard.
 
@@ -22,6 +22,15 @@ This project simulates that workflow end to end.
 - KPI reporting for backlog, SLA, and triage timing
 - Dashboard design with Streamlit
 - Technical documentation for portfolio and interview use
+
+## Portfolio Navigation
+
+- Spanish version: [README.es.md](README.es.md)
+- Version guide: [CHANGELOG.md](CHANGELOG.md)
+- Evidence folder for screenshots: [evidence/v2/README.md](evidence/v2/README.md)
+- Detection logic: [src/detect_alerts.py](src/detect_alerts.py)
+- SQL portfolio queries: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
+- Sample report: [output/alerts_report.md](output/alerts_report.md)
 
 ## Architecture
 
@@ -55,11 +64,30 @@ Each alert is enriched with:
 - triage and resolution timing
 - SLA breach flag
 
+## Version Overview
+
+- `v1` focused on a compact detection and dashboard demo with two rules and basic outputs.
+- `v2` adds enriched telemetry, a third rule, a SQL analytics layer, KPI exports, improved dashboarding, and stronger portfolio guidance.
+
 ## Setup
 
 ```bash
 python -m venv .venv
+```
+
+Activate the virtual environment:
+
+```bash
+# Linux / macOS
 source .venv/bin/activate
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -99,6 +127,8 @@ That makes the repository stronger for both SOC-oriented and data-oriented inter
 4. Status and rule distribution
 5. Enriched alerts table
 6. SQL query snippet and report preview
+
+Store those screenshots in [evidence/v2/](evidence/v2/README.md).
 
 ## Interview Talking Points
 

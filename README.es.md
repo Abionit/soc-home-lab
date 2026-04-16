@@ -1,4 +1,4 @@
-# SOC Home Lab - Pipeline de Deteccion, Analitica y Triage
+# SOC Home Lab v2 - Pipeline de Deteccion, Analitica y Triage
 
 Proyecto de portafolio para demostrar habilidades SOC con un flujo reproducible de deteccion, analitica SQL y visualizacion operativa.
 
@@ -22,6 +22,15 @@ Este laboratorio construye un mini pipeline que:
 - Dashboarding con Streamlit
 - Analitica operativa: backlog, SLA, tiempo de triage y tiempo de resolucion
 - Documentacion tecnica para GitHub e entrevistas
+
+## Navegacion de Portafolio
+
+- Version en ingles: [README.en.md](README.en.md)
+- Guia de versiones: [CHANGELOG.md](CHANGELOG.md)
+- Carpeta de evidencias para capturas: [evidence/v2/README.md](evidence/v2/README.md)
+- Logica de deteccion: [src/detect_alerts.py](src/detect_alerts.py)
+- Consultas SQL del portafolio: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
+- Reporte de ejemplo: [output/alerts_report.md](output/alerts_report.md)
 
 ## Arquitectura
 
@@ -55,11 +64,30 @@ Cada alerta ahora incluye:
 - tiempo de triage y de resolucion
 - bandera de incumplimiento de SLA
 
+## Resumen de Versiones
+
+- `v1` estaba orientada a una demo compacta de deteccion y dashboard con dos reglas y salidas basicas.
+- `v2` agrega telemetria enriquecida, una tercera regla, capa SQL, exportacion de KPIs, mejor dashboard y una presentacion mas fuerte para portafolio.
+
 ## Setup
 
 ```bash
 python -m venv .venv
+```
+
+Activa el entorno virtual:
+
+```bash
+# Linux / macOS
 source .venv/bin/activate
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+```
+
+Instala dependencias:
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -99,6 +127,8 @@ Eso hace que el repositorio funcione bien tanto para roles SOC como para perfile
 4. Distribucion por estado y por regla
 5. Tabla enriquecida de alertas
 6. Fragmento SQL y vista previa del reporte
+
+Guarda esas capturas en [evidence/v2/](evidence/v2/README.md).
 
 ## Como explicarlo en entrevista
 
