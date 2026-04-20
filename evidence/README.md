@@ -1,7 +1,6 @@
-## Evidence Folder
+## Evidence
 
-This directory is kept as the parent location for portfolio screenshots.
+This directory groups versioned visual references and related review artifacts for the project.
 
-- Use [evidence/v2/README.md](v2/README.md) for the current screenshot checklist.
-- Keep only real screenshots from the current project state.
-- Do not mix placeholder images with the portfolio version.
+- Current release index: [evidence/v2/README.md](v2/README.md)
+- Contents are organized by version to keep exports and visual material aligned with the corresponding release
