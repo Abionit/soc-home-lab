@@ -1,6 +1,6 @@
 # SOC Home Lab v2 - Pipeline de Deteccion, Analitica y Triage
 
-Proyecto de portafolio para demostrar habilidades SOC con un flujo reproducible de deteccion, analitica SQL y visualizacion operativa.
+Proyecto practico para demostrar habilidades SOC con un flujo reproducible de deteccion, analitica SQL y visualizacion operativa.
 
 ## Problema que resuelve
 
@@ -12,7 +12,7 @@ Este laboratorio construye un mini pipeline que:
 2. aplica reglas de deteccion,
 3. enriquece las alertas con contexto de triage,
 4. exporta metricas reutilizables en SQL,
-5. presenta resultados en un dashboard listo para portafolio.
+5. presenta resultados en un dashboard operativo.
 
 ## Habilidades que demuestra
 
@@ -21,13 +21,13 @@ Este laboratorio construye un mini pipeline que:
 - SQL con SQLite para reporting
 - Dashboarding con Streamlit
 - Analitica operativa: backlog, SLA, tiempo de triage y tiempo de resolucion
-- Documentacion tecnica para GitHub e entrevistas
+- Documentacion tecnica y salidas revisables
 
-## Navegacion de Portafolio
+## Documentacion y Referencias
 
 - Version en ingles: [README.en.md](README.en.md)
 - Guia de versiones: [CHANGELOG.md](CHANGELOG.md)
-- Carpeta de evidencias para capturas: [evidence/v2/README.md](evidence/v2/README.md)
+- Indice de evidencias: [evidence/v2/README.md](evidence/v2/README.md)
 - Logica de deteccion: [src/detect_alerts.py](src/detect_alerts.py)
 - Consultas SQL del portafolio: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
 - Reporte de ejemplo: [output/alerts_report.md](output/alerts_report.md)
@@ -67,7 +67,7 @@ Cada alerta ahora incluye:
 ## Resumen de Versiones
 
 - `v1` estaba orientada a una demo compacta de deteccion y dashboard con dos reglas y salidas basicas.
-- `v2` agrega telemetria enriquecida, una tercera regla, capa SQL, exportacion de KPIs, mejor dashboard y una presentacion mas fuerte para portafolio.
+- `v2` agrega telemetria enriquecida, una tercera regla, capa SQL, exportacion de KPIs, mejor dashboard y documentacion mas completa.
 
 ## Setup
 
@@ -119,20 +119,20 @@ Muchos puestos asociados piden mas que solo revisar alertas. Tambien esperan man
 
 Eso hace que el repositorio funcione bien tanto para roles SOC como para perfiles de analitica orientados a operaciones y seguridad.
 
-## Capturas que debes incluir en tu portafolio
+## Vistas de Referencia
 
-1. Ejecucion exitosa del pipeline en terminal
-2. Tarjetas KPI del dashboard
-3. Tendencia de alertas y distribucion por severidad
-4. Distribucion por estado y por regla
-5. Tabla enriquecida de alertas
-6. Fragmento SQL y vista previa del reporte
+La version actual incluye referencias visuales y exportaciones indexadas en [evidence/v2/README.md](evidence/v2/README.md), entre ellas:
 
-Guarda esas capturas en [evidence/v2/](evidence/v2/README.md).
+1. ejecucion del pipeline
+2. tarjetas KPI del dashboard
+3. tendencia y distribucion por severidad
+4. distribucion por estado y por regla
+5. tabla enriquecida de alertas
+6. vista previa del reporte SQL
 
-## Como explicarlo en entrevista
+## Temas de Discusion Tecnica
 
-1. Explica por que cada regla puede representar riesgo real
-2. Explica que alertas podrian ser falsos positivos y como afinarlas
-3. Explica como las metricas de triage ayudan a medir carga operativa
-4. Explica por que SQL tambien aporta valor dentro de un SOC
+1. por que cada regla puede representar riesgo real
+2. que alertas podrian ser falsos positivos y como afinarlas
+3. como las metricas de triage ayudan a medir carga operativa
+4. por que SQL tambien aporta valor dentro de un SOC
