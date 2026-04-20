@@ -1,6 +1,6 @@
 # SOC Home Lab v2 - Detection, Analytics, and Triage Pipeline
 
-Portfolio project that demonstrates practical SOC analyst skills with a reproducible detection pipeline, SQL reporting, and a lightweight operational dashboard.
+Project that demonstrates practical SOC analyst skills with a reproducible detection pipeline, SQL reporting, and a lightweight operational dashboard.
 
 ## Problem Statement
 
@@ -21,13 +21,13 @@ This project simulates that workflow end to end.
 - SQL analytics with SQLite
 - KPI reporting for backlog, SLA, and triage timing
 - Dashboard design with Streamlit
-- Technical documentation for portfolio and interview use
+- Technical documentation and reviewable outputs
 
-## Portfolio Navigation
+## Documentation And References
 
 - Spanish version: [README.es.md](README.es.md)
 - Version guide: [CHANGELOG.md](CHANGELOG.md)
-- Evidence folder for screenshots: [evidence/v2/README.md](evidence/v2/README.md)
+- Evidence index: [evidence/v2/README.md](evidence/v2/README.md)
 - Detection logic: [src/detect_alerts.py](src/detect_alerts.py)
 - SQL portfolio queries: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
 - Sample report: [output/alerts_report.md](output/alerts_report.md)
@@ -67,7 +67,7 @@ Each alert is enriched with:
 ## Version Overview
 
 - `v1` focused on a compact detection and dashboard demo with two rules and basic outputs.
-- `v2` adds enriched telemetry, a third rule, a SQL analytics layer, KPI exports, improved dashboarding, and stronger portfolio guidance.
+- `v2` adds enriched telemetry, a third rule, a SQL analytics layer, KPI exports, improved dashboarding, and expanded documentation.
 
 ## Setup
 
@@ -119,20 +119,20 @@ Many entry-level analyst roles ask for more than alert review. They often expect
 
 That makes the repository stronger for both SOC-oriented and data-oriented interviews.
 
-## Suggested Portfolio Screenshots
+## Representative Views
 
-1. Successful pipeline run in the terminal
-2. Dashboard KPI cards
-3. Trend and severity distribution
-4. Status and rule distribution
-5. Enriched alerts table
-6. SQL query snippet and report preview
+The current release includes visual references and exports indexed in [evidence/v2/README.md](evidence/v2/README.md), covering:
 
-Store those screenshots in [evidence/v2/](evidence/v2/README.md).
+1. pipeline execution
+2. dashboard KPI cards
+3. trend and severity distribution
+4. status and rule distribution
+5. enriched alerts table
+6. SQL report preview
 
-## Interview Talking Points
+## Technical Discussion Areas
 
-1. Why each rule matters operationally
-2. Which alerts might be false positives and how to tune them
-3. How triage timing and SLA metrics help show analyst workload
-4. Why SQL reporting is useful even in a SOC context
+1. operational value of each detection rule
+2. likely false positives and possible tuning paths
+3. how triage timing and SLA metrics reflect analyst workload
+4. why SQL reporting adds value in a SOC context
