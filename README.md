@@ -2,30 +2,57 @@
 
 Portfolio project that simulates a small SOC detection pipeline and a lightweight analytics layer.
 
-This repository includes two full documentation versions:
+## At A Glance
+
+- Business question: how can simulated telemetry be converted into enriched alerts, operational metrics, and analyst-ready reporting?
+- Stack: Python, SQL, SQLite, Streamlit
+- Main outputs: enriched alerts, alert KPIs, trend metrics, rule summaries, SQL report, and Streamlit dashboard
+- Current snapshot: `332` events analyzed | `5` alerts generated | `2` critical alerts | `3` SLA flags
+
+## Documentation
 
 - English: [README.en.md](README.en.md)
 - Espanol: [README.es.md](README.es.md)
+- Version guide: [CHANGELOG.md](CHANGELOG.md)
+- Evidence artifacts: [evidence/v2/README.md](evidence/v2/README.md)
 
-## v2 Highlights
+## What This Project Demonstrates
 
 - Reproducible event generation with enriched telemetry fields
-- Three detection rules with ATT&CK-aligned context
-- Enriched alert output with triage ownership, SLA status, and response timing
+- Rule-based detection logic with ATT&CK-style context
+- Alert enrichment with triage ownership, SLA status, and response timing
 - SQLite analytics database plus reusable SQL queries
-- Streamlit dashboard for operational metrics and portfolio screenshots
+- KPI reporting for backlog, severity, triage timing, and rule performance
+- Streamlit dashboard for operational review
 
-## Portfolio Quick Links
+## Workflow
 
-- English documentation: [README.en.md](README.en.md)
-- Spanish documentation: [README.es.md](README.es.md)
-- Version guide: [CHANGELOG.md](CHANGELOG.md)
-- Evidence folder for screenshots: [evidence/v2/README.md](evidence/v2/README.md)
-- Detection logic: [src/detect_alerts.py](src/detect_alerts.py)
+1. Generate simulated security telemetry.
+2. Apply detection rules to identify suspicious behavior.
+3. Enrich alerts with severity, ownership, asset, timing, and SLA context.
+4. Export alert tables, KPI summaries, trend outputs, and rule summaries.
+5. Materialize a SQLite analytics layer for reusable SQL analysis.
+6. Review the workflow through a Streamlit dashboard and Markdown report.
+
+## Repository Layout
+
+- [src/](src): pipeline, detection logic, analytics build, and dashboard code
+- [sql/](sql): reusable SQL portfolio queries
+- [output/](output): representative reports and analytical outputs
+- [analytics/](analytics): generated SQLite analytics database
+- [evidence/v2/](evidence/v2): project evidence artifacts
+- [tests/](tests): regression test for the failed-login burst rule
+
+## Representative Outputs
+
+- Alerts table: [output/alerts.csv](output/alerts.csv)
+- Alert report: [output/alerts_report.md](output/alerts_report.md)
+- KPI summary: [output/alert_kpis.csv](output/alert_kpis.csv)
+- Alert trend: [output/alert_trend.csv](output/alert_trend.csv)
+- Rule summary: [output/rule_summary.csv](output/rule_summary.csv)
 - SQL queries: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
-- Sample report: [output/alerts_report.md](output/alerts_report.md)
 
-## Quick Start
+## Run Locally
 
 ```bash
 python -m venv .venv
@@ -47,34 +74,5 @@ Install dependencies and run the project:
 pip install -r requirements.txt
 python src/run_pipeline.py
 python -m streamlit run src/dashboard.py
+python -m unittest discover -s tests
 ```
-
-## Project Outputs
-
-- `data/raw_events.jsonl`
-- `output/alerts.csv`
-- `output/alerts_report.md`
-- `output/alert_kpis.csv`
-- `output/alert_trend.csv`
-- `output/rule_summary.csv`
-- `analytics/soc_home_lab.db`
-- `sql/portfolio_queries.sql`
-
-## What to Screenshot for Portfolio
-
-Take screenshots in this order and save them in the `evidence/v2/` folder:
-
-1. `01_pipeline_success.png` - terminal with a successful pipeline run
-2. `02_dashboard_metrics.png` - KPI cards and secondary metrics
-3. `03_dashboard_trend_severity.png` - trend plus severity distribution
-4. `04_dashboard_status_rules.png` - status and rule distribution
-5. `05_dashboard_table.png` - alerts table with enriched fields
-6. `06_dashboard_sql_report.png` - SQL snippet plus report preview
-
-Optional extras:
-
-- `07_alert_kpis_csv.png`
-- `08_rule_summary_csv.png`
-- `09_sqlite_db_tables.png`
-
-If you want the cleanest portfolio version, capture the screens in that order and place the images in [evidence/v2/README.md](evidence/v2/README.md).
