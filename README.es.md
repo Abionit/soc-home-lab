@@ -12,7 +12,7 @@ Este laboratorio construye un mini pipeline que:
 2. aplica reglas de deteccion,
 3. enriquece las alertas con contexto de triage,
 4. exporta metricas reutilizables en SQL,
-5. presenta resultados en un dashboard listo para portafolio.
+5. presenta resultados en un dashboard operativo.
 
 ## Habilidades que demuestra
 
@@ -23,11 +23,11 @@ Este laboratorio construye un mini pipeline que:
 - Analitica operativa: backlog, SLA, tiempo de triage y tiempo de resolucion
 - Documentacion tecnica para GitHub e entrevistas
 
-## Navegacion de Portafolio
+## Navegacion del proyecto
 
 - Version en ingles: [README.en.md](README.en.md)
 - Guia de versiones: [CHANGELOG.md](CHANGELOG.md)
-- Carpeta de evidencias para capturas: [evidence/v2/README.md](evidence/v2/README.md)
+- Evidencias del proyecto: [evidence/v2/README.md](evidence/v2/README.md)
 - Logica de deteccion: [src/detect_alerts.py](src/detect_alerts.py)
 - Consultas SQL del portafolio: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
 - Reporte de ejemplo: [output/alerts_report.md](output/alerts_report.md)
@@ -55,7 +55,7 @@ Este laboratorio construye un mini pipeline que:
 - `R002` (`critical`): cambio de privilegios desde una geografia no confiable
 - `R003` (`high`): password reset seguido por login exitoso desde una geografia no confiable
 
-Cada alerta ahora incluye:
+Cada alerta incluye:
 
 - contexto tipo MITRE ATT&CK
 - metadata del host y fuente de logs
@@ -67,7 +67,7 @@ Cada alerta ahora incluye:
 ## Resumen de Versiones
 
 - `v1` estaba orientada a una demo compacta de deteccion y dashboard con dos reglas y salidas basicas.
-- `v2` agrega telemetria enriquecida, una tercera regla, capa SQL, exportacion de KPIs, mejor dashboard y una presentacion mas fuerte para portafolio.
+- `v2` agrega telemetria enriquecida, una tercera regla, capa SQL, exportacion de KPIs, mejor dashboard y documentacion mas clara para revision profesional.
 
 ## Setup
 
@@ -109,6 +109,14 @@ python -m streamlit run src/dashboard.py
 python -m unittest discover -s tests
 ```
 
+## Salidas representativas
+
+- Tabla de alertas con severidad, usuario, host, IP origen, geografia, estado y campos SLA
+- Resumen KPI con alertas totales, alertas criticas, backlog activo, tiempo de triage y alertas con SLA vencido
+- Resumen por regla para entender cobertura y distribucion de alertas
+- Consultas SQL reutilizables para reporting de seguridad
+- Reporte Markdown para revision rapida sin ejecutar el dashboard
+
 ## Por que esta capa SQL suma valor
 
 Muchos puestos asociados piden mas que solo revisar alertas. Tambien esperan manejo de metricas, reporting y consultas reutilizables. Por eso este proyecto incluye:
@@ -118,17 +126,6 @@ Muchos puestos asociados piden mas que solo revisar alertas. Tambien esperan man
 - consultas reutilizables en `sql/portfolio_queries.sql`
 
 Eso hace que el repositorio funcione bien tanto para roles SOC como para perfiles de analitica orientados a operaciones y seguridad.
-
-## Capturas que debes incluir en tu portafolio
-
-1. Ejecucion exitosa del pipeline en terminal
-2. Tarjetas KPI del dashboard
-3. Tendencia de alertas y distribucion por severidad
-4. Distribucion por estado y por regla
-5. Tabla enriquecida de alertas
-6. Fragmento SQL y vista previa del reporte
-
-Guarda esas capturas en [evidence/v2/](evidence/v2/README.md).
 
 ## Como explicarlo en entrevista
 
