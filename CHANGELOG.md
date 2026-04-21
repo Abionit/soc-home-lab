@@ -14,7 +14,7 @@ Main improvements:
 - reusable SQL portfolio queries
 - improved Streamlit dashboard
 - regression test for the failed-login burst rule
-- dedicated `evidence/v2/` screenshot flow
+- dedicated `evidence/v2/` folder for dashboard, reporting, and project evidence artifacts
 
 ## v1
 
