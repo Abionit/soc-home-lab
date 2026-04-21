@@ -23,11 +23,11 @@ This project simulates that workflow end to end.
 - Dashboard design with Streamlit
 - Technical documentation for portfolio and interview use
 
-## Portfolio Navigation
+## Project Navigation
 
 - Spanish version: [README.es.md](README.es.md)
 - Version guide: [CHANGELOG.md](CHANGELOG.md)
-- Evidence folder for screenshots: [evidence/v2/README.md](evidence/v2/README.md)
+- Evidence artifacts: [evidence/v2/README.md](evidence/v2/README.md)
 - Detection logic: [src/detect_alerts.py](src/detect_alerts.py)
 - SQL portfolio queries: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
 - Sample report: [output/alerts_report.md](output/alerts_report.md)
@@ -67,7 +67,7 @@ Each alert is enriched with:
 ## Version Overview
 
 - `v1` focused on a compact detection and dashboard demo with two rules and basic outputs.
-- `v2` adds enriched telemetry, a third rule, a SQL analytics layer, KPI exports, improved dashboarding, and stronger portfolio guidance.
+- `v2` adds enriched telemetry, a third rule, a SQL analytics layer, KPI exports, improved dashboarding, and cleaner portfolio-ready documentation.
 
 ## Setup
 
@@ -109,6 +109,14 @@ python -m streamlit run src/dashboard.py
 python -m unittest discover -s tests
 ```
 
+## Representative Outputs
+
+- Alert table with severity, user, host, source IP, geography, status, and SLA fields
+- KPI summary covering total alerts, critical alerts, active backlog, triage timing, and SLA flags
+- Rule summary for detection coverage and alert distribution
+- SQL queries for reusable security analytics reporting
+- Markdown report for fast review without running the dashboard
+
 ## Why the SQL Layer Matters
 
 Many entry-level analyst roles ask for more than alert review. They often expect candidates to work with operational metrics, reporting, and reusable queries. This project includes:
@@ -118,17 +126,6 @@ Many entry-level analyst roles ask for more than alert review. They often expect
 - reusable SQL queries in `sql/portfolio_queries.sql`
 
 That makes the repository stronger for both SOC-oriented and data-oriented interviews.
-
-## Suggested Portfolio Screenshots
-
-1. Successful pipeline run in the terminal
-2. Dashboard KPI cards
-3. Trend and severity distribution
-4. Status and rule distribution
-5. Enriched alerts table
-6. SQL query snippet and report preview
-
-Store those screenshots in [evidence/v2/](evidence/v2/README.md).
 
 ## Interview Talking Points
 
