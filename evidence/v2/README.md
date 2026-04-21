@@ -1,22 +1,24 @@
-## SOC Home Lab v2 - Screenshot Checklist
+# SOC Home Lab v2 - Evidence Gallery
 
+This page highlights visual evidence from the v2 dashboard and reporting workflow.
 
+## Dashboard Overview
 
-1. <img width="1259" height="585" alt="image" src="https://github.com/user-attachments/assets/bc8bb495-b595-46c2-9115-63b9a0508211" />
+<img width="1259" height="585" alt="SOC Home Lab v2 dashboard overview" src="https://github.com/user-attachments/assets/bc8bb495-b595-46c2-9115-63b9a0508211" />
 
-2. `02_dashboard_metrics.png`
-3. `03_dashboard_trend_severity.png`
-4. `04_dashboard_status_rules.png`
-5. `05_dashboard_table.png`
-6. `06_dashboard_sql_report.png`
-7. `07_alert_kpis_csv.png`
-8. `08_rule_summary_csv.png`
+## What This Evidence Shows
 
-Recommended capture flow:
+- KPI cards for events ingested, filtered alerts, critical alerts, active backlog, triage time, and SLA flags
+- Alert trend and severity distribution for quick operational review
+- Status and rule distribution for triage prioritization
+- Enriched alert fields including severity, status, user, department, hostname, source IP, geography, timing, and SLA context
+- Report preview for fast review without running the dashboard
 
-1. Run `python src/run_pipeline.py`
-2. Run `python -m streamlit run src/dashboard.py`
-3. Capture the dashboard sections in the order listed above
-4. Save the files in this folder with the exact names
+## Related Outputs
 
-This keeps the evidence aligned with the `v2` portfolio release and makes review easier for recruiters.
+- Alert table: [../../output/alerts.csv](../../output/alerts.csv)
+- KPI summary: [../../output/alert_kpis.csv](../../output/alert_kpis.csv)
+- Alert trend: [../../output/alert_trend.csv](../../output/alert_trend.csv)
+- Rule summary: [../../output/rule_summary.csv](../../output/rule_summary.csv)
+- SQL queries: [../../sql/portfolio_queries.sql](../../sql/portfolio_queries.sql)
+- Markdown report: [../../output/alerts_report.md](../../output/alerts_report.md)
