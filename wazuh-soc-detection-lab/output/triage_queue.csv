@@ -1,0 +1,10 @@
+timestamp,severity,status,rule_id,detection,host,user,srcip,mitre,outcome,triage_minutes
+2026-04-22T14:56:00+00:00,critical,investigating,100180,credential_access_indicator,win-admin-01,admin,10.10.60.12,T1003,contain,32
+2026-04-22T14:14:00+00:00,critical,investigating,100120,suspicious_powershell_encoded,win-app-02,svc-backup,10.10.20.14,T1059.001,contain,14
+2026-04-22T14:49:00+00:00,high,investigating,100170,suspicious_sudo_escalation,linux-ci-01,deploy,10.10.50.9,T1548,investigate,29
+2026-04-22T14:42:00+00:00,high,closed,100160,web_path_traversal,nginx-edge-01,-,192.0.2.77,T1190,blocked,26
+2026-04-22T14:35:00+00:00,high,closed,100150,malware_test_artifact,win-lab-01,analyst,10.10.40.22,T1204,lab_test,23
+2026-04-22T14:21:00+00:00,high,closed,100130,local_admin_created,win-fin-03,helpdesk01,10.10.10.8,T1136.001,validate,17
+2026-04-22T14:07:00+00:00,high,investigating,100110,rdp_bruteforce,win-dc-01,maria,198.51.100.44,T1110,investigate,11
+2026-04-22T14:00:00+00:00,high,closed,100100,ssh_bruteforce,linux-web-01,ubuntu,203.0.113.20,T1110,blocked,8
+2026-04-22T14:28:00+00:00,medium,closed,100140,sensitive_file_modified,linux-db-01,root,10.10.30.5,T1565.001,review,20
