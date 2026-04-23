@@ -1,6 +1,6 @@
-## SOC Home Lab v2 - Evidence Index
+# SOC Home Lab v2 - Evidence Gallery
 
-This page collects representative visual references from the `v2` release.
+This page collects representative visual evidence from the v2 dashboard and reporting workflow.
 
 ## Dashboard Overview
 
@@ -26,6 +26,23 @@ This page collects representative visual references from the `v2` release.
 
 <img width="891" height="444" alt="Alert detail view" src="https://github.com/user-attachments/assets/6a4b03c4-9cfe-49a6-9c4a-4e86af4633d7" />
 
-## Additional Export
+## Supporting Export View
 
-<img width="887" height="579" alt="Additional project export" src="https://github.com/user-attachments/assets/8d65b64d-47c5-4b19-948f-1d9bb000b7a3" />
+<img width="887" height="579" alt="Supporting project export" src="https://github.com/user-attachments/assets/8d65b64d-47c5-4b19-948f-1d9bb000b7a3" />
+
+## What This Evidence Shows
+
+- KPI cards for events ingested, filtered alerts, critical alerts, active backlog, triage time, and SLA flags
+- Alert trend and severity distribution for operational review
+- Status and rule distribution for triage prioritization
+- Enriched alert fields including severity, status, user, department, hostname, source IP, geography, timing, and SLA context
+- Report preview for fast review without running the dashboard
+
+## Related Outputs
+
+- Alert table: [../../output/alerts.csv](../../output/alerts.csv)
+- KPI summary: [../../output/alert_kpis.csv](../../output/alert_kpis.csv)
+- Alert trend: [../../output/alert_trend.csv](../../output/alert_trend.csv)
+- Rule summary: [../../output/rule_summary.csv](../../output/rule_summary.csv)
+- SQL queries: [../../sql/portfolio_queries.sql](../../sql/portfolio_queries.sql)
+- Markdown report: [../../output/alerts_report.md](../../output/alerts_report.md)
