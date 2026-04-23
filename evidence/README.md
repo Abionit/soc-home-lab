@@ -1,7 +1,11 @@
-## Evidence Folder
+# Evidence Index
 
-This directory is kept as the parent location for portfolio screenshots.
+This directory contains visual and reporting evidence for the SOC Home Lab project.
 
-- Use [evidence/v2/README.md](v2/README.md) for the current screenshot checklist.
-- Keep only real screenshots from the current project state.
-- Do not mix placeholder images with the portfolio version.
+## Current Evidence
+
+- v2 evidence gallery: [v2/README.md](v2/README.md)
+
+## Review Scope
+
+The evidence pages show dashboard views, reporting outputs, enriched alert fields, KPI summaries, and SQL-backed operational analysis from the project workflow.
