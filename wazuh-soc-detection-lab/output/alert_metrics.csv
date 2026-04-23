@@ -1,0 +1,2 @@
+total_alerts,critical_alerts,high_alerts,active_alerts,avg_triage_minutes,avg_resolution_minutes,unique_hosts,unique_mitre_techniques
+9,2,6,4,20.0,127.2,9,8
