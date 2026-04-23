@@ -1,78 +1,33 @@
-# SOC Home Lab v2
+# Wazuh SOC Detection Engineering Lab
 
-Portfolio project that simulates a small SOC detection pipeline and a lightweight analytics layer.
+Hands-on SOC project built around Wazuh SIEM/XDR, custom detection logic, MITRE ATT&CK mapping, alert triage, and security analytics reporting.
 
-## At A Glance
+## Project Location
 
-- Business question: how can simulated telemetry be converted into enriched alerts, operational metrics, and analyst-ready reporting?
-- Stack: Python, SQL, SQLite, Streamlit
-- Main outputs: enriched alerts, alert KPIs, trend metrics, rule summaries, SQL report, and Streamlit dashboard
-- Current snapshot: `332` events analyzed | `5` alerts generated | `2` critical alerts | `3` SLA flags
+The full lab is organized here:
 
-## Documentation
+- [wazuh-soc-detection-lab/](wazuh-soc-detection-lab/)
 
-- English: [README.en.md](README.en.md)
-- Espanol: [README.es.md](README.es.md)
-- Version guide: [CHANGELOG.md](CHANGELOG.md)
-- Evidence artifacts: [evidence/v2/README.md](evidence/v2/README.md)
+## What This Demonstrates
 
-## What This Project Demonstrates
+- Wazuh SIEM/XDR deployment planning
+- Custom Wazuh detection rules
+- MITRE ATT&CK mapping
+- Controlled lab event generation
+- SOC triage workflow
+- Alert metrics and reporting
+- Python-based security analytics
+- Executive and technical documentation
 
-- Reproducible event generation with enriched telemetry fields
-- Rule-based detection logic with ATT&CK-style context
-- Alert enrichment with triage ownership, SLA status, and response timing
-- SQLite analytics database plus reusable SQL queries
-- KPI reporting for backlog, severity, triage timing, and rule performance
-- Streamlit dashboard for operational review
+## Main Review Links
 
-## Workflow
+- Lab README: [wazuh-soc-detection-lab/README.md](wazuh-soc-detection-lab/README.md)
+- Architecture: [wazuh-soc-detection-lab/docs/architecture.md](wazuh-soc-detection-lab/docs/architecture.md)
+- Runbook: [wazuh-soc-detection-lab/docs/runbook.md](wazuh-soc-detection-lab/docs/runbook.md)
+- Detection catalog: [wazuh-soc-detection-lab/detections/detection_catalog.md](wazuh-soc-detection-lab/detections/detection_catalog.md)
+- Custom rules: [wazuh-soc-detection-lab/config/wazuh/rules/local_soc_rules.xml](wazuh-soc-detection-lab/config/wazuh/rules/local_soc_rules.xml)
+- Executive report: [wazuh-soc-detection-lab/output/executive_report.md](wazuh-soc-detection-lab/output/executive_report.md)
 
-1. Generate simulated security telemetry.
-2. Apply detection rules to identify suspicious behavior.
-3. Enrich alerts with severity, ownership, asset, timing, and SLA context.
-4. Export alert tables, KPI summaries, trend outputs, and rule summaries.
-5. Materialize a SQLite analytics layer for reusable SQL analysis.
-6. Review the workflow through a Streamlit dashboard and Markdown report.
+## Scope
 
-## Repository Layout
-
-- [src/](src): pipeline, detection logic, analytics build, and dashboard code
-- [sql/](sql): reusable SQL portfolio queries
-- [output/](output): representative reports and analytical outputs
-- [analytics/](analytics): generated SQLite analytics database
-- [evidence/v2/](evidence/v2): project evidence artifacts
-- [tests/](tests): regression test for the failed-login burst rule
-
-## Representative Outputs
-
-- Alerts table: [output/alerts.csv](output/alerts.csv)
-- Alert report: [output/alerts_report.md](output/alerts_report.md)
-- KPI summary: [output/alert_kpis.csv](output/alert_kpis.csv)
-- Alert trend: [output/alert_trend.csv](output/alert_trend.csv)
-- Rule summary: [output/rule_summary.csv](output/rule_summary.csv)
-- SQL queries: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
-
-## Run Locally
-
-```bash
-python -m venv .venv
-```
-
-Activate the virtual environment:
-
-```bash
-# Linux / macOS
-source .venv/bin/activate
-
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-```
-
-Install dependencies and run the project:
-
-```bash
-pip install -r requirements.txt
-python src/run_pipeline.py
-python -m streamlit run src/dashboard.py
-python -m unittest discover -s tests
-```
+This project is designed for local lab use, controlled test events, and professional portfolio review. It does not include destructive actions, credential theft, exploitation against third-party systems, or offensive activity outside the lab.
