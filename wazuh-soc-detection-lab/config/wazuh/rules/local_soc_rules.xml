@@ -1,0 +1,84 @@
+<group name="soclab,">
+
+  <rule id="100100" level="10">
+    <match>soclab_detection=ssh_bruteforce</match>
+    <description>SOC Lab: SSH brute force pattern detected</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication,brute_force,attack,</group>
+  </rule>
+
+  <rule id="100110" level="10">
+    <match>soclab_detection=rdp_bruteforce</match>
+    <description>SOC Lab: RDP brute force pattern detected</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>windows,authentication,brute_force,attack,</group>
+  </rule>
+
+  <rule id="100120" level="12">
+    <match>soclab_detection=suspicious_powershell_encoded</match>
+    <description>SOC Lab: suspicious encoded PowerShell command observed</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+    <group>windows,powershell,execution,attack,</group>
+  </rule>
+
+  <rule id="100130" level="10">
+    <match>soclab_detection=local_admin_created</match>
+    <description>SOC Lab: local administrator account creation observed</description>
+    <mitre>
+      <id>T1136.001</id>
+    </mitre>
+    <group>windows,account_change,persistence,attack,</group>
+  </rule>
+
+  <rule id="100140" level="7">
+    <match>soclab_detection=sensitive_file_modified</match>
+    <description>SOC Lab: sensitive file modification observed</description>
+    <mitre>
+      <id>T1565.001</id>
+    </mitre>
+    <group>fim,integrity,impact,attack,</group>
+  </rule>
+
+  <rule id="100150" level="10">
+    <match>soclab_detection=malware_test_artifact</match>
+    <description>SOC Lab: malware test artifact observed</description>
+    <mitre>
+      <id>T1204</id>
+    </mitre>
+    <group>malware,endpoint,attack,</group>
+  </rule>
+
+  <rule id="100160" level="10">
+    <match>soclab_detection=web_path_traversal</match>
+    <description>SOC Lab: web path traversal attempt observed</description>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+    <group>web,initial_access,attack,</group>
+  </rule>
+
+  <rule id="100170" level="10">
+    <match>soclab_detection=suspicious_sudo_escalation</match>
+    <description>SOC Lab: suspicious sudo escalation observed</description>
+    <mitre>
+      <id>T1548</id>
+    </mitre>
+    <group>linux,privilege_escalation,attack,</group>
+  </rule>
+
+  <rule id="100180" level="12">
+    <match>soclab_detection=credential_access_indicator</match>
+    <description>SOC Lab: credential access tool indicator observed</description>
+    <mitre>
+      <id>T1003</id>
+    </mitre>
+    <group>credential_access,endpoint,attack,</group>
+  </rule>
+
+</group>
