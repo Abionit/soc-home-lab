@@ -1,0 +1,5 @@
+<decoder name="soclab-keyvalue">
+  <prematch>soclab_detection=</prematch>
+  <regex>soclab_detection=(\S+) user=(\S+) srcip=(\S+) host=(\S+) outcome=(\S+)</regex>
+  <order>detection,user,srcip,host,outcome</order>
+</decoder>
