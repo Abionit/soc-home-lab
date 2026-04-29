@@ -1,14 +1,24 @@
 # Wazuh SOC Detection Engineering Lab
 
-Hands-on SOC project built around Wazuh SIEM/XDR, custom detection logic, MITRE ATT&CK mapping, alert triage, and security analytics reporting.
+Security analytics project built around Wazuh SIEM/XDR, custom detections, MITRE ATT&CK mapping, alert triage, and SOC reporting.
 
-## Project Location
+## Fast Review
 
-The full lab is organized here:
+If you only want the most useful review path, start here:
 
-- [wazuh-soc-detection-lab/](wazuh-soc-detection-lab/)
+- Full lab README: [wazuh-soc-detection-lab/README.md](wazuh-soc-detection-lab/README.md)
+- Detection catalog: [wazuh-soc-detection-lab/detections/detection_catalog.md](wazuh-soc-detection-lab/detections/detection_catalog.md)
+- Custom rules: [wazuh-soc-detection-lab/config/wazuh/rules/local_soc_rules.xml](wazuh-soc-detection-lab/config/wazuh/rules/local_soc_rules.xml)
+- Executive report: [wazuh-soc-detection-lab/output/executive_report.md](wazuh-soc-detection-lab/output/executive_report.md)
+- Execution status: [wazuh-soc-detection-lab/evidence/execution_status.md](wazuh-soc-detection-lab/evidence/execution_status.md)
 
-## What This Demonstrates
+## Best Role Fit
+
+- Security Analytics Analyst
+- Junior SOC Analyst
+- Monitoring or detection-focused technical review
+
+## What This Branch Demonstrates
 
 - Wazuh SIEM/XDR deployment planning
 - Custom Wazuh detection rules
@@ -18,15 +28,6 @@ The full lab is organized here:
 - Alert metrics and reporting
 - Python-based security analytics
 - Executive and technical documentation
-
-## Main Review Links
-
-- Lab README: [wazuh-soc-detection-lab/README.md](wazuh-soc-detection-lab/README.md)
-- Architecture: [wazuh-soc-detection-lab/docs/architecture.md](wazuh-soc-detection-lab/docs/architecture.md)
-- Runbook: [wazuh-soc-detection-lab/docs/runbook.md](wazuh-soc-detection-lab/docs/runbook.md)
-- Detection catalog: [wazuh-soc-detection-lab/detections/detection_catalog.md](wazuh-soc-detection-lab/detections/detection_catalog.md)
-- Custom rules: [wazuh-soc-detection-lab/config/wazuh/rules/local_soc_rules.xml](wazuh-soc-detection-lab/config/wazuh/rules/local_soc_rules.xml)
-- Executive report: [wazuh-soc-detection-lab/output/executive_report.md](wazuh-soc-detection-lab/output/executive_report.md)
 
 ## Scope
 
