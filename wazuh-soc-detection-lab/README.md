@@ -2,6 +2,21 @@
 
 Hands-on SOC project built around Wazuh SIEM/XDR, custom detection logic, MITRE ATT&CK mapping, alert triage, and security analytics reporting.
 
+## Fast Review
+
+If you want the strongest proof first, start here:
+
+- Detection catalog: [detections/detection_catalog.md](detections/detection_catalog.md)
+- Custom rules: [config/wazuh/rules/local_soc_rules.xml](config/wazuh/rules/local_soc_rules.xml)
+- Executive report: [output/executive_report.md](output/executive_report.md)
+- Execution status: [evidence/execution_status.md](evidence/execution_status.md)
+
+## Best Role Fit
+
+- Security Analytics Analyst
+- Junior SOC Analyst
+- Detection Engineering or monitoring-focused technical review
+
 ## At A Glance
 
 - Platform: Wazuh SIEM/XDR using the official Docker deployment path
@@ -10,9 +25,9 @@ Hands-on SOC project built around Wazuh SIEM/XDR, custom detection logic, MITRE 
 - Analytics layer: Python, CSV, SQLite, Markdown reports, and an optional Streamlit dashboard
 - Main outcome: a reviewable SOC lab that demonstrates both security operations and data analysis skills
 
-## Why This Project Matters
+## What This Project Demonstrates
 
-Security teams do not only need alerts. They need detections that are mapped to real attack behaviors, triage context that helps prioritize work, and reporting that explains operational risk clearly.
+Security teams do not only need alerts. They need detections mapped to real attack behaviors, triage context that helps prioritize work, and reporting that explains operational risk clearly.
 
 This project demonstrates that workflow:
 
