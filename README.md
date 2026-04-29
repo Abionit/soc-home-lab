@@ -1,13 +1,43 @@
 # SOC Home Lab v2
 
-SOC analytics project that simulates a compact detection pipeline with an analytics layer for triage, reporting, and operational visibility.
+SOC analytics case study that converts simulated telemetry into enriched alerts, triage metrics, SQL reporting, and dashboard outputs.
 
 Documentation is available in two languages:
 
 - English: [README.en.md](README.en.md)
 - Espanol: [README.es.md](README.es.md)
 
-## v2 Highlights
+## Fast Review
+
+If you want the quickest path through the project, start here:
+
+- Evidence gallery: [evidence/v2/README.md](evidence/v2/README.md)
+- Sample report: [output/alerts_report.md](output/alerts_report.md)
+- SQL queries: [sql/portfolio_queries.sql](sql/portfolio_queries.sql)
+- Detection logic: [src/detect_alerts.py](src/detect_alerts.py)
+
+## Best Role Fit
+
+- Operations Analyst
+- Security Analytics / SOC
+- Reporting Analyst in monitoring-heavy environments
+
+## Questions Answered
+
+- Which rules are generating the highest alert pressure?
+- Where does backlog accumulate?
+- How are severity and status distributed?
+- Which users and hosts repeat most often?
+- How long is triage and resolution taking across the queue?
+
+## At A Glance
+
+- Focus: alert enrichment, triage ownership, SLA-style metrics, and operational visibility
+- Stack: Python, SQL, SQLite, Streamlit
+- Main outputs: alerts report, KPI exports, rule summary, trend analysis, dashboard views
+- Security context: ATT&CK-aligned detections with triage and reporting layers
+
+## What This Project Demonstrates
 
 - Reproducible event generation with enriched telemetry fields
 - Three detection rules with ATT&CK-aligned context
@@ -62,4 +92,14 @@ python -m streamlit run src/dashboard.py
 
 ## Evidence Gallery
 
-Representative dashboard and reporting views are indexed in [evidence/v2/README.md](evidence/v2/README.md). They show KPI cards, trend analysis, severity distribution, rule distribution, enriched alert fields, and report previews.
+Representative dashboard and reporting views are indexed in [evidence/v2/README.md](evidence/v2/README.md):
+
+1. `01_pipeline_success.png` - terminal execution
+2. `02_dashboard_metrics.png` - KPI cards and secondary metrics
+3. `03_dashboard_trend_severity.png` - trend and severity distribution
+4. `04_dashboard_status_rules.png` - status and rule distribution
+5. `05_dashboard_table.png` - enriched alerts table
+6. `06_dashboard_sql_report.png` - SQL report preview
+7. `07_alert_kpis_csv.png` - KPI export
+8. `08_rule_summary_csv.png` - rule summary export
+9. `09_sqlite_db_tables.png` - SQLite objects overview
